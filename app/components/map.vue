@@ -1,10 +1,20 @@
 <template>
-<div class="map" id="map">
+<div class="map-container">
+    <div class="map-text">
+        <h2>Hof van Cartesius</h2>
+        <p>Vlampijpstraat 84, 3534 AR Utrecht</p>
+    </div>
+    <div class="map" id="map"></div>
 </div>
 </template>
 
 <script>
 var mapboxgl = require('mapbox-gl/dist/mapbox-gl.js');
+
+const lat = 5.085049;
+const long = 52.1047128;
+
+const coordinates = [lat, long];
 
 export default {
     name: 'map',
@@ -14,7 +24,7 @@ export default {
         var map = new mapboxgl.Map({
             container: 'map',
             style: 'mapbox://styles/mapbox/light-v9',
-            center: [5.1182397, 52.0756886],
+            center: coordinates,
             zoom: 13
         });
 
@@ -24,11 +34,11 @@ export default {
                 type: 'Feature',
                 geometry: {
                     type: 'Point',
-                    coordinates: [5.1182397, 52.0756886]
+                    coordinates: coordinates
                 },
                 properties: {
-                    title: 'Tom Ootes',
-                    description: 'Vechtclub XL (G2.4) <br/> Europalaan 2B <br/> 3526 KS Utrecht'
+                    title: 'Kantoor Ootes Web',
+                    description: ''
                 }
             }]
         };

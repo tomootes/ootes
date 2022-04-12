@@ -62,3 +62,23 @@
         inset 0px -11px 8px -10px #CCC;
 
 }
+
+.map-container{
+    position: relative;
+
+}
+.map-text{
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+	padding: 1rem;
+	z-index: 99;
+	background-color: white;
+	border: 1px solid black;
+	h2{
+		margin-top: 0;
+	}
+	p {
+		margin-bottom: 0;
+	}
+}

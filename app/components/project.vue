@@ -30,6 +30,14 @@
                     </h3>
 
                     <p class="project-text" v-html="project.text"></p>
+
+                    <div v-if="project.tasks" class="project-tasks">
+                        <h2>Taken</h2>
+                        <ul>
+                            <li v-for="task in project.tasks" :key="task">{{ task }}</li>
+                        </ul>
+                    </div>
+
                     <div>
                         <div class="badge badge-primary" v-for="technique in project.techniques" :key="technique">{{ technique }}</div>
                     </div>

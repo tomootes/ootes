@@ -32,6 +32,17 @@
     .project-text{
         margin-bottom: $gutter-small;
     }
+    .project-tasks{
+        margin-bottom: $gutter-small;
+        ul {
+            list-style: disc;
+            padding: auto;
+            margin: 0 0 0 2rem;
+            li {
+                line-height: 1.5;
+            }
+        }
+    }
     .screenshots{
         display: flex;
         flex-wrap: wrap;

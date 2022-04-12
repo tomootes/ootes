@@ -26,10 +26,30 @@ export default class ProjectsResource {
         type: 'Platform'
       },
       {
+        client: 'Ministerie van Volksgezondheid, Welzijn en Sport',
+        url: 'vws',
+        date: '2021-05-24',
+        name: 'Front-end developer - BCO-Portaal',
+        img: 'img/vws.jpg',
+        text: `Een belangrijke pijler voor de aanpak van covid-19 in Nederland was het bron- en contactonderzoek. Hiervoor ontwikkelde het VWS in-house zelf een bron- en contactonderzoekportaal.<br/><br/>
+        Mijn rol binnen het project was het ontwikkelen van nieuwe functionaliteit alsmede het verhogen van de kwaliteit van de front-end. Veel delen van de codebase hadden technical debt (lage leesbaarheid) en er ontbraken tests. Ook werkten we aan de volledige coverage van TypeScript binnen de codebase.
+        In de loop van het project werd het almaar groeiende ontwikkelteam opgeknipt in vier scrum teams. Om de kwaliteit/ juiste opzet van de front-end te waarborgen was er veel communicatie nodig onder front-end developers en waren de lijntjes kort. Ook werd er een wekelijkse front-end meeting in het leven geroepen.
+        <br/>
+        `,
+        tasks: [
+          'Presenteren nieuw features (demo)',
+          'Spikes (Oriëntatie libary keuzes)',
+          'Bouwen features (Vue, TypeScript)',
+          'Component tests (Jest, Vue-Test-Utils)',
+        ],
+        techniques: [ 'VueJS', 'TypeScript', 'Vue-Test-Utils', 'Jest', 'SCSS', 'Vue-Formulate'],
+        type: 'Single-page application'
+      },
+      {
         client: 'Gemeente Amsterdam',
         url: 'gemeente_amsterdam',
         date: '2020-01-31',
-        name: 'Full Stack Developer - Kies je kraam ',
+        name: 'Full-stack developer - Kies je kraam ',
         img: 'img/gemeente-amsterdam.svg',
         address: 'https://www.amsterdam.nl/ondernemen/markt-straathandel/digitaal-indelen/',
         techniques: [ 'Typescript', 'NodeJS', 'React','JS','SCSS','Postgres'],
@@ -42,7 +62,7 @@ export default class ProjectsResource {
         text: `In opdracht van <a target="_blank" href="http://www.tiltshift.nl/">TiltShift</a> bouwde ik mee aan een webapp voor de markten in Amsterdam.
         Dagelijks tekenden in Amsterdam marktmeesters de plattegrond van elke markt in en kreeg iedereen met de hand een plekje toegewezen.
         Vanwege organisatorische en logistieke redenen was er vraag naar een digitale oplossing voor het indelen van de markt.
-        In dit traject bouwden we aan een versie applicatie die kon proefdraaien in Amsterdam west op Plein 40 - 45.<br><br>
+        In dit traject bouwden we aan een versie van de applicatie die kon proefdraaien in Amsterdam west op Plein 40 - 45.<br><br>
         Ik was als full stack developer verantwoordelijk voor ontwikkeling aan zowel de front-end als de back-end. Als voertaal gebruikten we Typescript en als database Postgres.
         Terwijl <a target="_blank" href="https://github.com/tjoekbezoer">Daan</a> de berekening schreef voor de indeling, zorgde ik ervoor dat het dashboard en alle andere plekken met gebruikersinteractie werden uitgewerkt.`,
         type: 'Webapp'

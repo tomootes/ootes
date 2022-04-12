@@ -24,7 +24,7 @@
       <div class="container">
         <h2 class="section--heading flex-center">Opdrachtgevers</h2>
         <div class="row cards-holder">
-          <card v-for="project in sortByDate(projects)" :key="project" :title="project.type" :url="project.url" :text="project.text" :image="project.img"  />
+          <card v-for="project in sortByDate(projects)" :key="project" :title="project.name" :url="project.url" :text="project.text" :image="project.img"  />
         </div>
         <div class="flex-center gutter-top-small">
           <a v-bind:href="'#/projects/'">
