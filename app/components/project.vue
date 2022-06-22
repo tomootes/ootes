@@ -69,6 +69,7 @@ export default {
   },
   created() {
     console.log('here i was');
+    console.log('i left a line');
   },
   data() {
     return {
