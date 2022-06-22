@@ -67,6 +67,9 @@ export default {
   mounted: () => {
     window.scrollTo(0, 0);
   },
+  created() {
+    console.log('here i was');
+  },
   data() {
     return {
       project: restProjectsResource.getProject(this.$route.params.name)
