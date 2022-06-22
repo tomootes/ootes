@@ -70,6 +70,7 @@ export default {
   created() {
     console.log('here i was');
     console.log('i left a line');
+    console.log('just joking');
   },
   data() {
     return {
