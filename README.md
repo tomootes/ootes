@@ -4,7 +4,7 @@ webpack-dev-server --hot
 
 # Production
 
-webpack -p
+sudo ./node_modules/webpack/bin/webpack.js -p
 
 # To run webpack-dev-server locally:
 
