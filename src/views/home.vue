@@ -1,97 +1,6 @@
-<script>
-import _ from "lodash"
-
+<script setup>
 import Card from '../components/Card.vue'
-
-console.log(Card);
-
-import ProjectsResource from "../projectsResource.js";
-const restProjectsResource = new ProjectsResource();
-
-
-export default {
-  methods: {
-    sortByDate(projects) {
-      return _.orderBy(projects, "date", "desc").slice(0, 4);
-    }
-  },
-  data() {
-    return {
-      points: [
-        {
-          title: "Kwaliteit",
-          icon: "icon icon-cog",
-          text:
-            "De balans zoeken tussen een inzichtelijke codebase en het opleveren van functionaliteit, dat kan ik vrij aardig. Agile maar met oog voor een duurzaam product waaraan doorontwikkeld kan worden."
-        },
-        {
-          title: "Gebruiksvriendelijk",
-          icon: "icon icon-usability",
-          text:
-            "Door mijn praktijkervaring weet ik welke regels er nageleeft moeten worden om een app gebruiksvriendelijk te houden."
-        },
-        {
-          title: "Estethiek",
-          icon: "icon icon-design-mug",
-          text:
-            "Om een project te laten slagen is het belangrijk dat de stakeholders het resultaat een aantrekkelijk product vinden. Ik ben goed in het opzetten van een designsysteem zodat het eindresultaat mooi en overzichtelijk is."
-        }
-      ],
-      steps: [
-        {
-          title: "Praten",
-          icon: "icon icon-clipboard-edit",
-          text: "We kijken samen naar het idee."
-        },
-        {
-          title: "Bouwen",
-          icon: "icon icon-hammer-1",
-          text:
-            "We bouwen aan de afgesproken functionaliteit binnen een sprint."
-        },
-        {
-          title: "Feedback",
-          icon: "icon icon-chat-double-bubble-1",
-          text:
-            "Nieuwe versie online, hier wordt feedback op gegeven. Prioriteiten kunnen heroverwogen worden. "
-        },
-        {
-          title: "Bouwen",
-          icon: "icon icon-tools-wrench-screwdriver",
-          text: "Aan de hand van de feedback wordt er verder gebouwd."
-        },
-        {
-          title: "Opleveren",
-          icon: "icon icon-treasure-chest-open",
-          text:
-            "Als alle functionaliteit is afgevinkt en we allebei tevreden zijn wordt er opgeleverd."
-        }
-      ],
-      projects: restProjectsResource.getProjects()
-    };
-  }
-};
-
-function setPointsEvenHeight() {
-  let pointElements = document.getElementsByClassName("point");
-
-  let pointsArray = [].slice.call(pointElements);
-  let max = Math.max.apply(
-    null,
-    pointsArray.map(function(a) {
-      return a.offsetHeight;
-    })
-  );
-
-  for (let element of pointElements) {
-    element.style.height = max + "px";
-  }
-}
 </script>
-
-<style >
-
-</style>
 
 <template>
   <div>
@@ -119,8 +28,8 @@ function setPointsEvenHeight() {
       <div class="container">
         <h2 class="section--heading flex-center">Opdrachtgevers</h2>
         <div class="row cards-holder">
-          <h1>{{ projects }}</h1>
-          <Card v-for="project in sortByDate(projects)" :key="project" :title="project.name" :url="project.url" :text="project.text" :image="project.img"  />
+          <Card/>
+          <!-- <card v-for="project in projects" key="project" :title="project.name" url="project.url" text="project.text" image="project.img"  /> -->
         </div>
         <div class="flex-center gutter-top-small">
           <a v-bind:href="'#/projects/'">
@@ -130,7 +39,7 @@ function setPointsEvenHeight() {
       </div>
     </div>
 
-        <div class="section point-section bg-gray-lightest">
+    <!-- <div class="section point-section bg-gray-lightest">
       <div class="container">
         <h2 class="section--heading flex-center">Mijn sterke punten</h2>
         <div class="row points">
@@ -158,7 +67,7 @@ function setPointsEvenHeight() {
         </div>
 
       </div>
-    </div>
+    </div> -->
 
     <!-- <div class="section">
       <div class="container">
