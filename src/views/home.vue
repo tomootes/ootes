@@ -9,16 +9,16 @@ import Card from '../components/Card.vue'
       <particles></particles>
       <div class="overlay">
         <div class="container">
-            <span class="intro-text">
-              <span class="icon icon-greenhouse"></span>
-              <h2 class="heading">Web developer met oog voor het grotere plaatje</h2>
-              <a href="#/about">
-                <button type="button" class="btn btn--white">Samen werken aan het web?</button>
-              </a>
-            </span>
-            <div class="bottom">
-              <span class="down">Δ</span>
-            </div>
+          <span class="intro-text">
+            <span class="icon icon-greenhouse"></span>
+            <h2 class="heading">Web developer met oog voor het grotere plaatje</h2>
+            <a href="#/about">
+              <button type="button" class="btn btn--white">Samen werken aan het web?</button>
+            </a>
+          </span>
+          <div class="bottom">
+            <span class="down">Δ</span>
+          </div>
 
         </div>
       </div>
@@ -28,7 +28,7 @@ import Card from '../components/Card.vue'
       <div class="container">
         <h2 class="section--heading flex-center">Opdrachtgevers</h2>
         <div class="row cards-holder">
-          <Card/>
+          <Card />
           <!-- <card v-for="project in projects" key="project" :title="project.name" url="project.url" text="project.text" image="project.img"  /> -->
         </div>
         <div class="flex-center gutter-top-small">
@@ -39,35 +39,6 @@ import Card from '../components/Card.vue'
       </div>
     </div>
 
-    <!-- <div class="section point-section bg-gray-lightest">
-      <div class="container">
-        <h2 class="section--heading flex-center">Mijn sterke punten</h2>
-        <div class="row points">
-          <div class="col-4" v-for="point in points" :key="point.title">
-            <point :title="point.title" :icon="point.icon" :text="point.text"></point>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="section">
-      <div class="container">
-
-        <h1 class="flex-center"><span class="icon icon-map-treasure"></span></h1>
-        <h1 class="flex-center">Hoe komen we er?</h1>
-        <br />
-        <div class="row">
-          <div class="container">
-            <step v-for="(step, index) in steps" :icon="step.icon" :text="step.text" :index="index" :key="step.title" :title="step.title" ></step>
-          </div>
-        </div>
-        <div class="block">
-          <h1 class="flex-center"><span class="icon icon-synchronize-3 icon-big"></span></h1>
-          <p class="flex-center">De lengte van een sprint (timebox) spreken we gezamenlijk af.</p>
-        </div>
-
-      </div>
-    </div> -->
 
     <!-- <div class="section">
       <div class="container">
@@ -110,7 +81,7 @@ import Card from '../components/Card.vue'
       </div>
     </div> -->
 
-	<location></location>
+    <location></location>
 
   </div>
 </template>
